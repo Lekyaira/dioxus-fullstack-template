@@ -7,6 +7,6 @@ init_project
 ```
 Then edit the code and run 
 ```
-dx serve --platform=web
+dx serve --platform web
 ```
 as normal!
