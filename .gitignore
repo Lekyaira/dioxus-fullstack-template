@@ -1,0 +1,9 @@
+# Whitelist
+/*
+
+!/.bin/*
+!/.envrc
+!/shell.nix
+!/.gitignore
+!/README.md 
+!/LICENSE
