@@ -1,4 +1,5 @@
 #!/bin/sh 
+rm -rf .git .gitignore README.md LICENSE
 dx init -y --subtemplate Bare-Bones -o Fullstack=true -o default_platform=web
 cargo add reqwest --features json
 cargo add rusqlite --optional
