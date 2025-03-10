@@ -1,0 +1,6 @@
+#!/bin/sh 
+dx init -y --subtemplate Bare-Bones -o Fullstack=true -o default_platform=web
+cargo add reqwest --features json
+cargo add rusqlite --optional
+cargo add serde --features derive
+dioxus-cargo-template

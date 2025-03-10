@@ -1,0 +1,16 @@
+#!/bin/sh 
+# Gets lan IP from given nic.
+lanip() {
+  # parse output from ip
+  echo $(ip a show $1 | grep 'inet' | head -n 4 | awk '/[1-9]*\.[1-9]*\.[1-9]*\.[1-9]*/ {print $2}' | cut -d'/' -f1)
+}
+
+# Find active interface.
+nic=$(ip a | grep ' state UP' | cut -d' ' -f2 | cut -d':' -f1)
+if [[ ${nic} != "" ]]; then
+  # Save the IP address for use.
+  IP=$(lanip ${nic})
+else 
+  # Use the local IP.
+  IP="127.0.0.1"
+fi

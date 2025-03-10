@@ -1,6 +1,7 @@
 # Whitelist
 /*
 
+!/.bin
 !/.bin/*
 !/.envrc
 !/shell.nix
